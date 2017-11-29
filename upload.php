@@ -53,15 +53,15 @@ if (!$uploadOk) {
         // Outputs all the result of shellcommand "ls", and returns
         // the last output line into $last_line. Stores the return value
         // of the shell command in $retval.
-        //print_r('python3 ButlletinsSplitter1.1.py '.$target_file);
-        //$last_line = system('python3 ButlletinsSplitter1.1.py '.$target_file, $retval);
+        
+        $last_line = system('python3 ButlletinsSplitter1.1.py '.$target_file, $retval);
 
         /* Add redirection so we can get stderr. */
-        $handle = popen('python3 ButlletinsSplitter1.1.py '.$target_file.' 2>&1', 'r');
-        echo "'$handle'; " . gettype($handle) . "\n";
-        $read = fread($handle, 2096);
-        echo $read;
-        pclose($handle);
+        // $handle = popen('python3 ButlletinsSplitter1.1.py '.$target_file.' 2>&1', 'r');
+        // echo "'$handle'; " . gettype($handle) . "\n";
+        // $read = fread($handle, 2096);
+        // echo $read;
+        // pclose($handle);
 
         // Printing additional info
         echo '

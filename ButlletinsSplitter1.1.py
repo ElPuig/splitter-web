@@ -31,6 +31,7 @@ def main():
             current_student = get_student_name(page_text_string)
 
         student = current_student
+
         output_file = student + '.pdf'
         output_writer = PyPDF2.PdfFileWriter()
 
@@ -83,7 +84,9 @@ def get_student_name(s):
         student = ''.join(l for i, l in enumerate(student_with_id)
                           if not l.isdigit() and not
                           (l.isupper() and student_with_id[i+1].isdigit()))
-
+        
+        # https://stackoverflow.com/questions/20078816/replace-non-ascii-characters-with-a-single-space
+        student = ''.join([i if ord(i) < 128 else '' for i in student])
         return student
     except:  # Blank page
         return None
