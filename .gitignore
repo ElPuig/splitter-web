@@ -1,2 +1,4 @@
 /uploads/*
 !/uploads/README.md
+/batch/tmp/*
+!/batch/tmp/README.md

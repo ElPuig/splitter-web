@@ -1,7 +1,7 @@
 <?php
 # https://www.w3schools.com/php/php_file_upload.asp
 
-$target_dir = "uploads/";
+$target_dir = "../uploads/";
 // $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploaded_file = $_FILES["fileToUpload"]["tmp_name"];
 $fileType = "pdf";
@@ -14,10 +14,10 @@ if(isset($_POST["submit"])) {
     $finfo = finfo_open(FILEINFO_MIME_TYPE);
     
     if(finfo_file($finfo, $uploaded_file) === 'application/pdf') {
-        echo "'{$uploaded_file}' is a PDF" . PHP_EOL;
+      //  echo "'{$uploaded_file}' is a PDF" . PHP_EOL;
         $uploadOk = true;
     } else {
-        echo "'{$uploaded_file}' is not a PDF" . PHP_EOL;
+     //   echo "'{$uploaded_file}' is not a PDF" . PHP_EOL;
         $uploadOk = false;
     }
     finfo_close($finfo);
@@ -44,34 +44,39 @@ if (!$uploadOk) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        // echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
         # https://stackoverflow.com/questions/166944/calling-python-in-php
-        // Call the ButlletinsSplitter
+
+        // Call the ButlletinsSplitter        
+        system('python3 ../batch/ButlletinsSplitter1.1.py '.$target_file, $retval);
+
+        // -j skip relative paths
+        // -q quiet mode (no verbose)
+        system('zip -rjq ../batch/tmp/studenten.zip ../batch/tmp/*.pdf', $retval);
         
-        echo '<pre>';
+        // set example variables
+        $filename = "studenten.zip";
+        $filepath = realpath("../batch/tmp/")."/";
 
-        // Outputs all the result of shellcommand "ls", and returns
-        // the last output line into $last_line. Stores the return value
-        // of the shell command in $retval.
-        
-        $last_line = system('python3 ButlletinsSplitter1.1.py '.$target_file, $retval);
+        header("Content-type: application/zip"); 
+        header("Content-Disposition: attachment; filename=$filename");
+        header("Content-Length: " . filesize($filepath.$filename));
+        header("Pragma: no-cache"); 
+        header("Expires: 0"); 
 
-        /* Add redirection so we can get stderr. */
-        // $handle = popen('python3 ButlletinsSplitter1.1.py '.$target_file.' 2>&1', 'r');
-        // echo "'$handle'; " . gettype($handle) . "\n";
-        // $read = fread($handle, 2096);
-        // echo $read;
-        // pclose($handle);
+        flush();
+        readfile($filepath.$filename);
+        // delete file
+        unlink($filepath.$filename);
 
-        // Printing additional info
-        echo '
-        </pre>
-        <hr />Last line of the output: ' . $last_line . '
-        <hr />Return value: ' . $retval;
+        // clear tmp files
+        system('rm -rf ../batch/tmp/*.pdf', $retval);
 
+        // uploads
+        system('rm -rf ../uploads/*.pdf', $retval);
 
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
 }
-
+?>

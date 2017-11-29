@@ -32,7 +32,7 @@ def main():
 
         student = current_student
 
-        output_file = student + '.pdf'
+        output_file = '../batch/tmp/' + student + '.pdf'
         output_writer = PyPDF2.PdfFileWriter()
 
         while current_student == student and current_student is not None:
