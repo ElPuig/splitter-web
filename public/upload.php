@@ -48,7 +48,7 @@ if (!$uploadOk) {
         # https://stackoverflow.com/questions/166944/calling-python-in-php
 
         // Call the ButlletinsSplitter        
-        system('python3 ../batch/ButlletinsSplitter1.1.py '.$target_file, $retval);
+        system('python3 ../batch/ButlletinsSplitter.py '.$target_file, $retval);
 
         // -j skip relative paths
         // -q quiet mode (no verbose)

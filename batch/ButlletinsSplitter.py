@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-"""ButlletinsSplitter1.1.py
+"""ButlletinsSplitter.py - Versió 1.2
 Fitxer d'entrada:     Fitxer PDF amb els butlletins de notes d'un grup sencer
-                      amb el nom «informe.pdf».
+                      amb el nom «informe.pdf», preparat o no per la impressió
+                      a doble cara.
 Fitxers de sortida:   Un fitxer PDF per cada alumne amb el seu butlletí i
                       reanomenat amb el seu nom.
 """
@@ -35,7 +36,9 @@ def main():
         output_file = '../batch/tmp/' + student + '.pdf'
         output_writer = PyPDF2.PdfFileWriter()
 
-        while current_student == student and current_student is not None:
+        while (current_student == student and
+               current_student is not None and
+               page_num <= total_pages):
             output_writer.addPage(butlletins_reader.getPage(page_num))
 
             page_num += 1
