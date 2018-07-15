@@ -1,19 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Splitter web!</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Splitter-Web</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-	</head>
+    </head>
 
-<body>
+    <body>
+    <div><br><b>Arrossegueu el PDF de Saga o cerqueu-lo al vostre equip</b></div>
+    <div class="drop_zone" id="drop_zone">
+        <script type="text/javascript">
+            var drop_zone = document.getElementById('drop_zone');
+        </script>
+    <!--Select file opening dialog box-->
+        <form id="upload_file" action="file_search.php" method="post" enctype="multipart/form-data">
+            <input name="fileToUpload" type="file" onchange="this.form.submit(); drop_zone.className = 'drop_zone';">
+       </form>
+    </div>
 
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Afegeix el pdf descarregat del SAGA:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Enviar arxiu i descarregar el zip" name="submit">
-</form>
+    <!--Drag & drop file-->
+    <script type="text/javascript">
+        (function() {
+            drop_zone.onclick = function(e) {
+                this.className = 'drop_zone click';
+            }
 
-</body>
+
+            drop_zone.ondragover = function() {
+                this.className = 'drop_zone dragover';
+                return false;
+            }
+
+
+            drop_zone.ondragleave = function() {
+                this.className = 'drop_zone';
+                return false;
+            }
+
+
+            drop_zone.ondrop = function(e) {
+                e.preventDefault();
+                this.className = 'drop_zone';
+                upload(e.dataTransfer.files);
+            }
+
+
+            var upload = function(upload_file) {
+                var formData = new FormData(),
+                xhr = new XMLHttpRequest();
+
+                formData.append('file', upload_file[0]);
+
+                xhr.open('POST', 'drag_drop_process.php', true);
+                xhr.send(formData);
+
+                xhr.onreadystatechange = function() {
+                    if (this.readyState ==  4 & this.status == 200) {
+                        var response = xhr.responseText;
+                        console.log(response);
+                        location.href = JSON.parse(response).zip;
+
+                        clean();
+                    }
+                }
+            }
+
+
+            // Clean uploaded file and result file
+            var clean = function() {
+                var formData = new FormData(),
+                xhr = new XMLHttpRequest();
+                xhr.open('POST', 'drag_drop_clean.php');
+                xhr.send(formData);
+            }
+
+        }());
+        
+    </script>
+
+    </body>
 </html>
-

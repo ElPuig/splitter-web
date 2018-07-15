@@ -12,7 +12,6 @@ Make sure `uploads/` and `batch/tmp/` directories are web writable.
 	 sudo apt-get install python3-pypdf2
 
 ## apache2 configuration: Virtual Host
-
 	 <VirtualHost *:80>
 		 ServerAdmin admin@splitter.local
 		 ServerName www.splitter.local
@@ -21,4 +20,3 @@ Make sure `uploads/` and `batch/tmp/` directories are web writable.
 		 ErrorLog ${APACHE_LOG_DIR}/error.log
 		 CustomLog ${APACHE_LOG_DIR}/access.log combined
 	 </VirtualHost>
-

@@ -1,0 +1,48 @@
+body {
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+div {
+	word-wrap: break-word;
+	width: 300px;
+	text-align: center;
+}
+
+.drop_zone {
+	position: relative;
+    display: inline-block;    
+    border-radius: 8px;
+    border: 2px dashed #ccc;
+	width: 300px;
+    height: 300px;
+    padding: 4px 6px 4px 8px;
+    font: normal 14px Myriad Pro, Verdana, Geneva, sans-serif;
+    text-align: center;
+    color: #ccc;
+    line-height: 300px;
+    margin-top: 2px;
+  	background-image: url("../images/inactive_background.png");
+  	background-repeat: no-repeat;
+}
+
+.drop_zone input[type="file"]{
+	-webkit-appearance: none;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	top: 0; left: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.drop_zone.dragover {
+	border-color: #000;
+	color: #000;
+	background-image: url("../images/arrow_background.png");
+}
+
+.drop_zone.click {
+	border-color: #000;
+	color: #000;
+	background-image: url("../images/folder_background.png");
+}
