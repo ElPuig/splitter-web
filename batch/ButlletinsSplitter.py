@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 """
@@ -10,7 +10,7 @@ Fitxers de sortida:   Un fitxer PDF per cada alumne amb el seu butlletí i
                       reanomenat amb el seu nom.
 """
 
-import os
+import os, sys
 import PyPDF2
 
 #SOURCE_FILE_SAGA = "informe.pdf"
@@ -33,6 +33,7 @@ def main():
 
         student = current_student
         output_file = (student + '.pdf').encode('utf-8')
+        output_file = '../batch/tmp/' + (student + '.pdf').encode('utf-8')
         output_writer = PyPDF2.PdfFileWriter()
 
         # Iterates through new individually created PDF file
