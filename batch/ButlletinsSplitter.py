@@ -1,7 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""ButlletinsSplitter.py - Versió 1.2
+"""
+ButlletinsSplitter1.3.py
 Fitxer d'entrada:     Fitxer PDF amb els butlletins de notes d'un grup sencer
                       amb el nom «informe.pdf», preparat o no per la impressió
                       a doble cara.
@@ -9,13 +10,11 @@ Fitxers de sortida:   Un fitxer PDF per cada alumne amb el seu butlletí i
                       reanomenat amb el seu nom.
 """
 
-import os, sys
+import os
 import PyPDF2
-
 
 #SOURCE_FILE_SAGA = "informe.pdf"
 SOURCE_FILE_SAGA = sys.argv[1]
-
 
 def main():
     butlletins = open(SOURCE_FILE_SAGA, 'rb')
@@ -25,6 +24,7 @@ def main():
     page_num = 0
     current_student = None
 
+    # Iterates through whole PDF source file
     while page_num < total_pages:
         if current_student is None:
             page_text = butlletins_reader.getPage(page_num)
@@ -32,14 +32,14 @@ def main():
             current_student = get_student_name(page_text_string)
 
         student = current_student
-
-        output_file = '../batch/tmp/' + student + '.pdf'
+        output_file = (student + '.pdf').encode('utf-8')
         output_writer = PyPDF2.PdfFileWriter()
 
+        # Iterates through new individually created PDF file
         while (current_student == student and
                current_student is not None and
-               page_num <= total_pages):
-            output_writer.addPage(butlletins_reader.getPage(page_num))
+               page_num <= total_pages-1):
+            output_writer.addPage(page_text)
 
             page_num += 1
 
@@ -54,9 +54,6 @@ def main():
 
             with open(output_file, 'wb') as output_stream:
                 output_writer.write(output_stream)
-
-
-    # https://stackoverflow.com/questions/9942594/unicodeencodeerror-ascii-codec-cant-encode-character-u-xa0-in-position-20
 
     butlletins.close()
 
@@ -87,9 +84,7 @@ def get_student_name(s):
         student = ''.join(l for i, l in enumerate(student_with_id)
                           if not l.isdigit() and not
                           (l.isupper() and student_with_id[i+1].isdigit()))
-        
-        # https://stackoverflow.com/questions/20078816/replace-non-ascii-characters-with-a-single-space
-        student = ''.join([i if ord(i) < 128 else '' for i in student])
+
         return student
     except:  # Blank page
         return None
@@ -106,7 +101,7 @@ def offer_navigation_menu_for_troublesome_source_files(source_file):
     option = input("\nQuè voleu fer?:"
                    "\n\t1. Solucionar el problema i seguir "
                    "executant el programa"
-                   "\n\t2. Voleu sortir del programa"
+                   "\n\t2. Sortir del programa"
                    "\nTrieu una opció (1/2): ")
 
     if option == "1":

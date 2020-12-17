@@ -22,3 +22,17 @@ Make sure `uploads/` and `batch/tmp/` directories are web writable.
 		 CustomLog ${APACHE_LOG_DIR}/access.log combined
 	 </VirtualHost>
 
+## How to use the splitter without web
+
+Into the `batch/` directory you will find two scripts:
+
+ ButlletinsSplitter.py
+
+ SagaSplit.sh
+
+Choose one according to your needs, being SagaReport.pdf the report that you have downloaded from Saga.
+
+ python3 ButlletinsSplitter.py SagaReport.pdf
+
+ sh SagaSplit.sh SagaReport.pdf
+
