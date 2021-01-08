@@ -1,0 +1,234 @@
+[Fri Jan 08 00:17:33.316049 2021] [mpm_event:notice] [pid 2450:tid 140476307831872] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 00:17:33.316209 2021] [core:notice] [pid 2450:tid 140476307831872] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 00:20:37.058390 2021] [mpm_event:notice] [pid 2450:tid 140476307831872] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 00:21:07.376128 2021] [mpm_event:notice] [pid 692:tid 139807543143488] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 00:21:07.377123 2021] [core:notice] [pid 692:tid 139807543143488] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 00:22:27.361052 2021] [mpm_event:notice] [pid 692:tid 139807543143488] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 00:23:33.310288 2021] [mpm_event:notice] [pid 680:tid 139731616762944] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 00:23:33.310838 2021] [core:notice] [pid 680:tid 139731616762944] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 00:25:53.366076 2021] [mpm_event:notice] [pid 680:tid 139731616762944] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 00:26:29.890296 2021] [mpm_event:notice] [pid 702:tid 140439711067200] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 00:26:29.890889 2021] [core:notice] [pid 702:tid 140439711067200] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 00:26:56.486028 2021] [mpm_event:notice] [pid 702:tid 140439711067200] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 00:28:24.571310 2021] [mpm_event:notice] [pid 693:tid 140605772995648] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 00:28:24.571908 2021] [core:notice] [pid 693:tid 140605772995648] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 00:29:38.016771 2021] [mpm_event:notice] [pid 693:tid 140605772995648] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 00:29:49.692682 2021] [mpm_event:notice] [pid 678:tid 140086265842752] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 00:29:49.694106 2021] [core:notice] [pid 678:tid 140086265842752] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 00:31:30.067072 2021] [mpm_event:notice] [pid 678:tid 140086265842752] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 00:31:50.700314 2021] [mpm_event:notice] [pid 684:tid 140704509549632] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 00:31:50.700810 2021] [core:notice] [pid 684:tid 140704509549632] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 00:34:19.507509 2021] [mpm_event:notice] [pid 684:tid 140704509549632] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 00:38:39.816793 2021] [mpm_event:notice] [pid 670:tid 140675144236096] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 00:38:39.820232 2021] [core:notice] [pid 670:tid 140675144236096] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 01:02:23.450661 2021] [mpm_event:notice] [pid 670:tid 140675144236096] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 08:29:21.921532 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 08:29:21.923417 2021] [core:notice] [pid 714:tid 139689598925888] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 08:57:03.423123 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00493: SIGUSR1 received.  Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Fri Jan 08 08:57:03.425888 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 08:57:03.425892 2021] [core:notice] [pid 714:tid 139689598925888] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 09:09:41.049981 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00493: SIGUSR1 received.  Doing graceful restart
+AH00112: Warning: DocumentRoot [/var/www/splitter-web/public/] does not exist
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Fri Jan 08 09:09:41.052300 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 09:09:41.052304 2021] [core:notice] [pid 714:tid 139689598925888] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 09:11:13.060574 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00493: SIGUSR1 received.  Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Fri Jan 08 09:11:13.064610 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 09:11:13.064616 2021] [core:notice] [pid 714:tid 139689598925888] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 09:12:47.333324 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00493: SIGUSR1 received.  Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Fri Jan 08 09:12:47.337491 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 09:12:47.337496 2021] [core:notice] [pid 714:tid 139689598925888] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 09:18:17.308024 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00493: SIGUSR1 received.  Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Fri Jan 08 09:18:17.311287 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 09:18:17.311292 2021] [core:notice] [pid 714:tid 139689598925888] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 09:18:47.760908 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00493: SIGUSR1 received.  Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Fri Jan 08 09:18:47.763457 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 09:18:47.763461 2021] [core:notice] [pid 714:tid 139689598925888] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 09:24:02.835825 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00493: SIGUSR1 received.  Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Fri Jan 08 09:24:02.840937 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 09:24:02.840944 2021] [core:notice] [pid 714:tid 139689598925888] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 09:38:20.064936 2021] [mpm_event:notice] [pid 714:tid 139689598925888] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 09:38:20.113209 2021] [mpm_event:notice] [pid 10940:tid 139645633301568] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 09:38:20.113321 2021] [core:notice] [pid 10940:tid 139645633301568] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 10:22:24.933754 2021] [core:error] [pid 10942:tid 139645589063424] (13)Permission denied: [client 127.0.0.1:41750] AH00035: access to / denied (filesystem path '/var/www/splitter.local/public') because search permissions are missing on a component of the path
+[Fri Jan 08 10:22:28.601956 2021] [core:error] [pid 10942:tid 139645580670720] (13)Permission denied: [client 127.0.0.1:41750] AH00035: access to / denied (filesystem path '/var/www/splitter.local/public') because search permissions are missing on a component of the path
+[Fri Jan 08 11:09:52.127559 2021] [mpm_event:notice] [pid 10940:tid 139645633301568] AH00491: caught SIGTERM, shutting down
+[Fri Jan 08 11:09:52.166395 2021] [mpm_prefork:notice] [pid 21074] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 11:09:52.166450 2021] [core:notice] [pid 21074] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 11:09:52.539870 2021] [mpm_prefork:notice] [pid 21074] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 11:09:52.590508 2021] [mpm_prefork:notice] [pid 21141] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 11:09:52.590537 2021] [core:notice] [pid 21141] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 11:12:07.422751 2021] [mpm_prefork:notice] [pid 21141] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 11:12:07.473120 2021] [mpm_prefork:notice] [pid 21234] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 11:12:07.473156 2021] [core:notice] [pid 21234] AH00094: Command line: '/usr/sbin/apache2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 11:12:15.548210 2021] [php7:warn] [pid 21235] [client 127.0.0.1:41828] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 11:12:15.548313 2021] [php7:warn] [pid 21235] [client 127.0.0.1:41828] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+[Fri Jan 08 11:12:15.548322 2021] [php7:warn] [pid 21235] [client 127.0.0.1:41828] PHP Warning:  unlink(/var/www/splitter.local/batch/tmp/studenten.zip): No such file or directory in /var/www/splitter.local/public/upload.php on line 70, referer: http://localhost/
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 11:12:42.326191 2021] [php7:warn] [pid 21237] [client 127.0.0.1:41840] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 11:12:42.326292 2021] [php7:warn] [pid 21237] [client 127.0.0.1:41840] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+[Fri Jan 08 11:12:42.326302 2021] [php7:warn] [pid 21237] [client 127.0.0.1:41840] PHP Warning:  unlink(/var/www/splitter.local/batch/tmp/studenten.zip): No such file or directory in /var/www/splitter.local/public/upload.php on line 70, referer: http://localhost/
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 11:16:19.918877 2021] [php7:warn] [pid 21238] [client 127.0.0.1:41848] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 11:16:19.918980 2021] [php7:warn] [pid 21238] [client 127.0.0.1:41848] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 11:17:31.766464 2021] [php7:warn] [pid 21239] [client 127.0.0.1:41850] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 11:17:31.766575 2021] [php7:warn] [pid 21239] [client 127.0.0.1:41850] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 11:42:54.975009 2021] [php7:warn] [pid 21236] [client 127.0.0.1:41864] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 11:42:54.975124 2021] [php7:warn] [pid 21236] [client 127.0.0.1:41864] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 11:46:45.199263 2021] [php7:warn] [pid 21255] [client 127.0.0.1:41868] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 11:46:45.199361 2021] [php7:warn] [pid 21255] [client 127.0.0.1:41868] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+[Fri Jan 08 11:48:25.356073 2021] [mpm_prefork:notice] [pid 21234] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 11:48:25.409702 2021] [mpm_prefork:notice] [pid 21971] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 11:48:25.409730 2021] [core:notice] [pid 21971] AH00094: Command line: '/usr/sbin/apache2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 11:48:27.881773 2021] [php7:warn] [pid 21972] [client 127.0.0.1:41870] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 11:48:27.881870 2021] [php7:warn] [pid 21972] [client 127.0.0.1:41870] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 11:48:36.502096 2021] [php7:warn] [pid 21973] [client 127.0.0.1:41872] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 11:48:36.502212 2021] [php7:warn] [pid 21973] [client 127.0.0.1:41872] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+[Fri Jan 08 12:09:02.303008 2021] [mpm_prefork:notice] [pid 21971] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 12:09:02.353426 2021] [mpm_prefork:notice] [pid 22193] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 12:09:02.353480 2021] [core:notice] [pid 22193] AH00094: Command line: '/usr/sbin/apache2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 12:09:08.346206 2021] [php7:warn] [pid 22195] [client 127.0.0.1:41890] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 12:09:08.346312 2021] [php7:warn] [pid 22195] [client 127.0.0.1:41890] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+[Fri Jan 08 12:11:47.819712 2021] [mpm_prefork:notice] [pid 22193] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 12:11:47.872662 2021] [mpm_prefork:notice] [pid 22263] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 12:11:47.872693 2021] [core:notice] [pid 22263] AH00094: Command line: '/usr/sbin/apache2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 12:11:52.313084 2021] [php7:warn] [pid 22265] [client 127.0.0.1:41894] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 12:11:52.313169 2021] [php7:warn] [pid 22265] [client 127.0.0.1:41894] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+[Fri Jan 08 12:13:09.008708 2021] [mpm_prefork:notice] [pid 22263] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 12:13:09.059087 2021] [mpm_prefork:notice] [pid 22494] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 12:13:09.059114 2021] [core:notice] [pid 22494] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 12:13:10.937049 2021] [core:error] [pid 22496] (13)Permission denied: [client 127.0.0.1:41896] AH00035: access to / denied (filesystem path '/var/www/splitter.local/public') because search permissions are missing on a component of the path
+[Fri Jan 08 12:13:12.917032 2021] [core:error] [pid 22496] (13)Permission denied: [client 127.0.0.1:41896] AH00035: access to / denied (filesystem path '/var/www/splitter.local/public') because search permissions are missing on a component of the path
+[Fri Jan 08 12:13:36.678231 2021] [core:error] [pid 22495] (13)Permission denied: [client 127.0.0.1:41898] AH00035: access to / denied (filesystem path '/var/www/splitter.local/public') because search permissions are missing on a component of the path
+[Fri Jan 08 12:13:39.669017 2021] [mpm_prefork:notice] [pid 22494] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 12:13:39.719568 2021] [mpm_prefork:notice] [pid 22522] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 12:13:39.719596 2021] [core:notice] [pid 22522] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 12:13:41.377013 2021] [core:error] [pid 22525] (13)Permission denied: [client 127.0.0.1:41900] AH00035: access to / denied (filesystem path '/var/www/splitter.local/public') because search permissions are missing on a component of the path
+[Fri Jan 08 12:15:23.835451 2021] [mpm_prefork:notice] [pid 22522] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 12:15:23.896773 2021] [mpm_prefork:notice] [pid 22561] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 12:15:23.896800 2021] [core:notice] [pid 22561] AH00094: Command line: '/usr/sbin/apache2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 12:15:33.914225 2021] [php7:warn] [pid 22563] [client 127.0.0.1:41906] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 12:15:33.914328 2021] [php7:warn] [pid 22563] [client 127.0.0.1:41906] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+[Fri Jan 08 12:15:52.411517 2021] [mpm_prefork:notice] [pid 22561] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 12:15:52.462481 2021] [mpm_prefork:notice] [pid 22618] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 12:15:52.462505 2021] [core:notice] [pid 22618] AH00094: Command line: '/usr/sbin/apache2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 12:15:55.535723 2021] [php7:warn] [pid 22619] [client 127.0.0.1:41908] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 12:15:55.535823 2021] [php7:warn] [pid 22619] [client 127.0.0.1:41908] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+[Fri Jan 08 12:31:04.222305 2021] [mpm_prefork:notice] [pid 22618] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 12:31:04.275393 2021] [mpm_prefork:notice] [pid 22925] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 12:31:04.275421 2021] [core:notice] [pid 22925] AH00094: Command line: '/usr/sbin/apache2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 12:31:08.553114 2021] [php7:warn] [pid 22926] [client 127.0.0.1:41928] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 63, referer: http://localhost/
+[Fri Jan 08 12:32:43.610863 2021] [mpm_prefork:notice] [pid 22925] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 12:32:43.661225 2021] [mpm_prefork:notice] [pid 23016] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 12:32:43.661255 2021] [core:notice] [pid 23016] AH00094: Command line: '/usr/sbin/apache2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 12:36:43.303666 2021] [mpm_prefork:notice] [pid 23016] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 12:36:43.357613 2021] [mpm_prefork:notice] [pid 23067] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 12:36:43.357643 2021] [core:notice] [pid 23067] AH00094: Command line: '/usr/sbin/apache2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+Traceback (most recent call last):
+  File "../batch/ButlletinsSplitter.py", line 14, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
+[Fri Jan 08 12:40:58.909804 2021] [php7:error] [pid 23071] [client 127.0.0.1:41940] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 79, referer: http://localhost/
+[Fri Jan 08 13:38:44.999066 2021] [php7:error] [pid 23072] [client 127.0.0.1:41974] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 13:43:21.298354 2021] [php7:error] [pid 23085] [client 127.0.0.1:41986] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 13:44:41.384252 2021] [mpm_prefork:notice] [pid 23067] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 13:44:41.434672 2021] [mpm_prefork:notice] [pid 23659] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 13:44:41.434704 2021] [core:notice] [pid 23659] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 13:44:49.811621 2021] [php7:error] [pid 23660] [client 127.0.0.1:41990] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 13:52:57.149635 2021] [php7:error] [pid 23663] [client 127.0.0.1:42002] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 13:54:53.110451 2021] [php7:error] [pid 23664] [client 127.0.0.1:42006] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 13:56:26.934306 2021] [mpm_prefork:notice] [pid 23659] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 13:56:26.987372 2021] [mpm_prefork:notice] [pid 24052] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 13:56:26.987401 2021] [core:notice] [pid 24052] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 13:56:34.579841 2021] [php7:error] [pid 24054] [client 127.0.0.1:42012] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 14:02:07.277286 2021] [mpm_prefork:notice] [pid 24052] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 14:02:07.328022 2021] [mpm_prefork:notice] [pid 24152] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 14:02:07.328049 2021] [core:notice] [pid 24152] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 14:02:15.990418 2021] [php7:error] [pid 24153] [client 127.0.0.1:42022] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 14:51:02.042552 2021] [mpm_prefork:notice] [pid 24152] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 14:51:02.094239 2021] [mpm_prefork:notice] [pid 24414] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 14:51:02.094272 2021] [core:notice] [pid 24414] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 14:51:09.629394 2021] [php7:error] [pid 24416] [client 127.0.0.1:42046] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 14:58:50.322234 2021] [mpm_prefork:notice] [pid 24414] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 14:58:50.377137 2021] [mpm_prefork:notice] [pid 24541] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 14:58:50.377167 2021] [core:notice] [pid 24541] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 14:58:58.131885 2021] [php7:error] [pid 24543] [client 127.0.0.1:42060] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 15:01:36.967836 2021] [php7:error] [pid 24542] [client 127.0.0.1:42064] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 15:01:45.323739 2021] [mpm_prefork:notice] [pid 24541] AH00169: caught SIGTERM, shutting down
+[Fri Jan 08 15:01:45.378392 2021] [mpm_prefork:notice] [pid 24599] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Fri Jan 08 15:01:45.378418 2021] [core:notice] [pid 24599] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 08 15:01:54.330447 2021] [php7:error] [pid 24600] [client 127.0.0.1:42066] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 80, referer: http://localhost/
+[Fri Jan 08 15:03:38.299307 2021] [php7:error] [pid 24603] [client 127.0.0.1:42082] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 55, referer: http://localhost/
+[Fri Jan 08 15:11:17.088551 2021] [php7:notice] [pid 24600] [client 127.0.0.1:42098] PHP Notice:  Undefined variable: output in /var/www/splitter.local/public/upload.php on line 55, referer: http://localhost/
+[Fri Jan 08 17:19:23.658989 2021] [php7:error] [pid 25398] [client 127.0.0.1:42176] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 83, referer: http://localhost/
+[Fri Jan 08 17:23:32.729892 2021] [php7:warn] [pid 25400] [client 127.0.0.1:42182] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 68, referer: http://localhost/
+[Fri Jan 08 17:23:32.729982 2021] [php7:warn] [pid 25400] [client 127.0.0.1:42182] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 73, referer: http://localhost/
+[Fri Jan 08 17:23:32.729993 2021] [php7:warn] [pid 25400] [client 127.0.0.1:42182] PHP Warning:  unlink(/var/www/splitter.local/batch/tmp/studenten.zip): No such file or directory in /var/www/splitter.local/public/upload.php on line 75, referer: http://localhost/
+[Fri Jan 08 17:25:57.689392 2021] [php7:warn] [pid 25413] [client 127.0.0.1:42188] PHP Warning:  filesize(): stat failed for /var/www/splitter.local/batch/tmp/studenten.zip in /var/www/splitter.local/public/upload.php on line 70, referer: http://localhost/
+[Fri Jan 08 17:25:57.689487 2021] [php7:warn] [pid 25413] [client 127.0.0.1:42188] PHP Warning:  readfile(/var/www/splitter.local/batch/tmp/studenten.zip): failed to open stream: No such file or directory in /var/www/splitter.local/public/upload.php on line 75, referer: http://localhost/
+[Fri Jan 08 17:25:57.689497 2021] [php7:warn] [pid 25413] [client 127.0.0.1:42188] PHP Warning:  unlink(/var/www/splitter.local/batch/tmp/studenten.zip): No such file or directory in /var/www/splitter.local/public/upload.php on line 77, referer: http://localhost/
+[Fri Jan 08 18:57:04.163999 2021] [php7:error] [pid 25398] [client 127.0.0.1:42272] PHP Parse error:  syntax error, unexpected '$file' (T_VARIABLE), expecting ';' or ',' in /var/www/splitter.local/public/upload.php on line 66, referer: http://localhost/
