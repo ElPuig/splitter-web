@@ -3,3 +3,4 @@
 /batch/tmp/*
 !/batch/tmp/README.md
 .DS_Store
+/log
