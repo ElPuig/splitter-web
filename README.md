@@ -13,6 +13,11 @@ sudo apt install php7-4-cli
 sudo apt install php libapache2-mod-php
 sudo apt-get install python3	
 sudo apt-get install python3-pypdf2
+sudo apt install default-jdk
+sudo apt install python3-pip
+pip3 install tika
+
+[Install Apache Tika](https://thecustomizewindows.com/2018/06/how-to-install-apache-tika-on-ubuntu/)
 ```
 
 ## Apache configuration: VirtualHost

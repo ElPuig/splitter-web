@@ -29,7 +29,11 @@ Sortida:    Cap.
 """
 def generate_individual_files():
     butlletins = open(SOURCE_FILE_SAGA, 'rb')
-    butlletins_reader = PyPDF2.PdfFileReader(butlletins)
+    try:
+        butlletins_reader = PyPDF2.PdfFileReader(butlletins)
+    except:
+        print("<br/>El fitxer seleccionat no és de butlletins de notes o no té el format esperat.")
+        sys.exit()
 
     total_pages = butlletins_reader.getNumPages()
     page_num = 0
@@ -112,12 +116,15 @@ def zip_files():
                       in os.listdir(os.path.join(os.getcwd(),TMP_DIR))
                       if f.split('.')[1]=='pdf']
 
-    result_zip_file = os.path.join(os.getcwd(),TMP_DIR, RESULT_ZIP_FILE)
-
-    with ZipFile(result_zip_file, 'w') as zip:
-        for file in pdf_files_list:
-            file_name = file.split('/')[-1]
-            zip.write(file, file_name)
+    if len(pdf_files_list) == 1:
+        print("<br/>El fitxer seleccionat no és de butlletins de notes o no té el format esperat.")
+        sys.exit()
+    else:
+        result_zip_file = os.path.join(os.getcwd(),TMP_DIR, RESULT_ZIP_FILE)
+        with ZipFile(result_zip_file, 'w') as zip:
+            for file in pdf_files_list:
+                file_without_folder_path = file.split('/')[-1]
+                zip.write(file, file_without_folder_path)
 
 
 """def remove_tmp_files
