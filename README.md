@@ -1,5 +1,5 @@
 # splitter-web
-Split SAGA based PDFs reports into student individual PDFs.
+Split SAGA PDF reports ("butlletins") into student individual PDFs. Count passed and evaluated UF from SAGA PDF reports ("actes").
 
 ## Installation
 Clone the repository into your web root folder.
