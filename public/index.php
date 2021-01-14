@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Splitter web!</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <style>
+        <?php include 'css/style.css'; ?>
+    </style>
 	</head>
 
 <body>
-<br>
-<br>
-<form method="post" enctype="multipart/form-data">
-    Afegiu el PDF amb les actes descarregat de SAGA:
-    <input type="file" name="actaToUpload" id="fileToUpload">
-    <input type="submit" value="Comptar el total d'UF avaluades i aprovades" name="submitActes">
-</form>
+<div class="split left">
+  <img class="logo" src="img/logo.png" alt="logo">
+  <div class="centered">
+    <h3>Comptar el total d'UF avaluades i aprovades</h3>
+    <form method="post" enctype="multipart/form-data">
+        <font size="-1">Afegiu el PDF descarregat de SAGA<br> amb les actes:</font><br>
+        <input class="left" type="file" name="actaToUpload" id="fileToUpload"><br><br>
+        <input type="submit" value="Comptar" name="submitActes">
+    </form>
+   </div>
+   <div class="result">
 <?php 
 
     define("PYTHON_ACTES_SCRIPT", "UFAprovadesVsAvaluades.py");
@@ -39,6 +43,8 @@
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
         
         $uploaded_file_tmp_name = $_FILES["actaToUpload"]["tmp_name"];
+
+        echo '<font size="-1">Espereu mentre es fa el recompte,<br> el procés pot trigar alguns segons</font><br>';
         
         if(finfo_file($finfo, $uploaded_file_tmp_name) === 'application/pdf') {
             $uploadOk = true;
@@ -91,20 +97,18 @@
         }
     }
 ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+  </div>
+</div>
 <hr>
-<br>
-<br>
-<form action="" method="post" enctype="multipart/form-data">
-    Afegiu el PDF amb els butlletins descarregat de SAGA:
-    <input type="file" name="butlletinsToUpload" id="butlletinsToUpload">
-    <input type="submit" value="Descarregar ZIP amb butlletins individuals" name="submitButlletins">
-</form>
+<div class="split right">
+	<h1 class="cicles">Cicles Formatius</h1>
+  <div class="centered">
+    <h3>Dividir els butlletins en arxius individuals</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+        <font size="-1">Afegiu el PDF descarregat de SAGA<br> amb els butlletins:</font><br>
+        <input class="right" type="file" name="butlletinsToUpload" id="butlletinsToUpload"><br><br>
+        <input type="submit" value="Descarregar ZIP" name="submitButlletins">
+    </form>
 <?php
 
 define("PYTHON_BUTLLETINS_SCRIPT", "ButlletinsSplitter.py");
@@ -213,6 +217,8 @@ if (!$uploadOk) {
     }
 }
 ?>
+  </div>
+</div>
 </body>
 </html>
 

@@ -22,11 +22,11 @@ def count_uf_and_calculate_ratio(uf_list):
     aprovades = len([uf for uf in uf_list if int(uf.rsplit(" ",1)[1])>=5])
 
     print("<br/>"
-          f"UF avaluades: {avaluades}"
+          f"UF avaluades: <b>{avaluades}</b>"
           "<br/>"
-          f"UF aprovades: {aprovades}"
+          f"UF aprovades: <b>{aprovades}</b>"
           "<br/>"
-          f"Ratio d'UF aprovades: {((aprovades/avaluades)*100):.2f}%")
+          f"Ratio d'UF aprovades: <b>{((aprovades/avaluades)*100):.2f}%</b>")
 
 
 if __name__ == "__main__":

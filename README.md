@@ -19,15 +19,21 @@ pip3 install tika
 ```
 [Install Apache Tika](https://thecustomizewindows.com/2018/06/how-to-install-apache-tika-on-ubuntu/)
 
+## Crontab configuration
+Add the following line to your crontab:
+```
+@reboot bash /var/www/html/splitter.local/batch/tika_server_start.sh &
+```
+
 ## Apache configuration: VirtualHost
 ```
-	 <VirtualHost *:80>
-		 ServerAdmin admin@splitter.local
-		 ServerName www.splitter.local
-		 ServerAlias splitter.local
-		 DocumentRoot /var/www/splitter.local/public
-		 ErrorLog ${APACHE_LOG_DIR}/error.log
-		 CustomLog ${APACHE_LOG_DIR}/access.log combined
-	 </VirtualHost>
+<VirtualHost *:80>
+	ServerAdmin admin@splitter.local
+	ServerName www.splitter.local
+	ServerAlias splitter.local
+	DocumentRoot /var/www/splitter.local/public
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
 ```
 
