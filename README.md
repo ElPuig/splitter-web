@@ -12,17 +12,10 @@ sudo apt install apache2
 sudo apt install php7.4-cli
 sudo apt install php libapache2-mod-php
 sudo apt-get install python3	
-sudo apt-get install python3-pypdf2
 sudo apt install default-jdk
 sudo apt install python3-pip
+pip3 install PyPDF2
 pip3 install tika
-```
-[Install Apache Tika](https://thecustomizewindows.com/2018/06/how-to-install-apache-tika-on-ubuntu/)
-
-## Crontab configuration
-Add the following line to your crontab:
-```
-@reboot bash /var/www/html/splitter.local/batch/tika_server_start.sh &
 ```
 
 ## Apache configuration: VirtualHost
@@ -37,3 +30,8 @@ Add the following line to your crontab:
 </VirtualHost>
 ```
 
+## How to run
+```
+bash /var/www/html/batch/tika_server_start.sh
+```
+Visit localhost:80 from your browser.

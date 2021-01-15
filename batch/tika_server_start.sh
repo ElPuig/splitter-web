@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# As seen at https://stackoverflow.com/questions/56827440/how-to-set-tika-server-endpoint-from-tika-python-lib, answer provided by Nilo Alexandre Pereira
+
 TIKA_PORT=9998
 TIKA_HOST=localhost
 CURRENT_USER=$(whoami) 
