@@ -32,7 +32,11 @@ pip3 install tika
 
 ## How to run
 Start the server with:
+
 `sudo systemctl start apache2`
+
 Run the tika server script with:
+
 `bash /var/www/html/script/tika_server_start.sh`
+
 Visit localhost:80 from your browser.
