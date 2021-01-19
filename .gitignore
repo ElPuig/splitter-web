@@ -1,6 +1,6 @@
 /uploads/*
 !/uploads/README.md
-/batch/tmp/*
-!/batch/tmp/README.md
+/script/tmp/*
+!/script/tmp/README.md
 .DS_Store
 /log

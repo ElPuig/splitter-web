@@ -4,15 +4,15 @@ Split SAGA PDF reports ("butlletins") into student individual PDFs. Count passed
 ## Installation
 Clone the repository into your web root folder.
 
-Make sure `uploads/` and `batch/tmp/` directories are web writable.
+Make sure `uploads/` and `script/tmp/` directories are web writable.
 
 ## Requirements
 ```
 sudo apt install apache2
 sudo apt install php7.4-cli
 sudo apt install php libapache2-mod-php
-sudo apt-get install python3	
 sudo apt install default-jdk
+sudo apt-get install python3	
 sudo apt install python3-pip
 pip3 install PyPDF2
 pip3 install tika
@@ -31,7 +31,8 @@ pip3 install tika
 ```
 
 ## How to run
-```
-bash /var/www/html/batch/tika_server_start.sh
-```
+Start the server with:
+`sudo systemctl start apache2`
+Run the tika server script with:
+`bash /var/www/html/script/tika_server_start.sh`
 Visit localhost:80 from your browser.

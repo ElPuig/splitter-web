@@ -23,7 +23,7 @@
 <?php 
 
     define("PYTHON_ACTES_SCRIPT", "UFAprovadesVsAvaluades.py");
-    define("PYTHON_ACTES_SCRIPT_DIR", "../batch/");
+    define("PYTHON_ACTES_SCRIPT_DIR", "../script/");
     define("TARGET_ACTES_DIR", "../uploads/");
 
     $fileType = "pdf";
@@ -112,9 +112,9 @@
 <?php
 
 define("PYTHON_BUTLLETINS_SCRIPT", "ButlletinsSplitter.py");
-define("PYTHON_BUTLLETINS_SCRIPT_DIR", "../batch/");
+define("PYTHON_BUTLLETINS_SCRIPT_DIR", "../script/");
 define("RESULT_BUTLLETINS_ZIP_FILE", "butlletins.zip");
-define("RESULT_BUTLLETINS_ZIP_FILE_DIR", "../batch/tmp/");
+define("RESULT_BUTLLETINS_ZIP_FILE_DIR", "../script/tmp/");
 define("TARGET_BUTLLETINS_DIR", "../uploads/");
 
 $uploaded_file = $_FILES["butlletinsToUpload"]["tmp_name"];
@@ -166,7 +166,6 @@ if (!$uploadOk) {
 } else {
 
     if (move_uploaded_file($_FILES["butlletinsToUpload"]["tmp_name"], $target_file)) {
-        #echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.\n";
 
         // Call the ButlletinsSplitter        
         $ret_val = exec("python3 ".PYTHON_BUTLLETINS_SCRIPT_DIR.PYTHON_BUTLLETINS_SCRIPT." ".$target_file, $ret_val);
@@ -203,7 +202,7 @@ if (!$uploadOk) {
                 unlink($file);
 
                 // Clear temp zip file
-                system("rm -rf ../batch/tmp/".RESULT_ZIP_FILE, $retval);
+                system("rm -rf ../script/tmp/".RESULT_ZIP_FILE, $retval);
 
                 // Clear uploaded file
                 system("rm -rf ../uploads/*.pdf", $retval);

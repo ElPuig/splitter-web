@@ -18,7 +18,7 @@ from zipfile import ZipFile
 
 SOURCE_FILE_SAGA = sys.argv[1]
 RESULT_ZIP_FILE = 'butlletins.zip'
-TMP_DIR = '../batch/tmp'
+TMP_DIR = '../script/tmp'
 
 
 """def generate_individual_files(s)
