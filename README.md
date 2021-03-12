@@ -15,7 +15,6 @@ sudo apt install default-jdk
 sudo apt-get install python3	
 sudo apt install python3-pip
 pip3 install PyPDF2
-pip3 install tika
 ```
 
 ## Apache configuration: VirtualHost
