@@ -1,11 +1,9 @@
+
 body {
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 div {
-	word-wrap: break-word;
-	width: 300px;
-	text-align: center;
 }
 
 img.logo {
@@ -47,6 +45,7 @@ img.logo {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
 }
 
 .result {
@@ -93,6 +92,7 @@ input[type=submit] {
     padding: 10px 20px;
     border-radius: 3px;
 }
+
 input[type=submit]:hover {
 	color: #FFFFFF;
     background: #808080;

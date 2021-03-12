@@ -1,43 +1,61 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
+
+import os
+import sys
+import PyPDF2
 import re
-from sys import argv
-from tika import parser
 
-UF_PATTERN = re.compile('UF\d\d - \d{2,3} \d{1,2}')
+SOURCE_FILE_SAGA = sys.argv[1]
+TMP_DIR = '../uploads/tmp'
 
+patro = re.compile('UF\d\d-\d{3,}')
 
-def convert_pdf_to_txt(filename):
-    raw = parser.from_file(filename)
-    return raw['content']
+def openfile(file):
+    butlletins = open(file,"rb")
+    return butlletins
 
+def main(_filePdf):
+    num_pages = _filePdf.getNumPages()
+    current_page = 0
+    avaluades = 0
+    ap = 0
+    while current_page < num_pages:
+        page_text = _filePdf.getPage(current_page).extractText()
 
-def parse_text(text):
-    return UF_PATTERN.findall(text)
+        llistaUFs = patro.findall(page_text)
+        #esborrem la FCT (UF01-317) pq amb amb l'expressió regular es cola al llistat
+        while 'UF01-317' in llistaUFs:
+            llistaUFs.remove('UF01-317')
+        #print(llistaUFs)
 
+        #UF's aprovades
+        for uf in llistaUFs:
+            nota = int(uf[7:])
+            if nota >=5:
+                ap += 1
 
-def count_uf_and_calculate_ratio(uf_list):
-    avaluades = len(uf_list)
-    aprovades = len([uf for uf in uf_list if int(uf.rsplit(" ",1)[1])>=5])
+        #Qtat de UF's avaluades per cada pàgina
+        l = len(llistaUFs)
+        avaluades += l
+        current_page += 1
 
-    print("<br/>"
-          f"UF avaluades: <b>{avaluades}</b>"
-          "<br/>"
-          f"UF aprovades: <b>{aprovades}</b>"
-          "<br/>"
-          f"Ratio d'UF aprovades: <b>{((aprovades/avaluades)*100):.2f}%</b>")
-
+    print(f"Avaluades: {avaluades}, aprovades: {ap} : {((ap/avaluades)*100):.2f}%")
 
 if __name__ == "__main__":
-    if len(argv)==2:
+    if len(sys.argv)==2:
         try:
-            extracted_text = convert_pdf_to_txt(argv[1])
-            uf_list = parse_text(extracted_text)
-            if (len(uf_list) == 0):
-              print("<br/>El fitxer seleccionat no és un acta o no té el format esperat.")
-            count_uf_and_calculate_ratio(uf_list)
+            f = open(SOURCE_FILE_SAGA, 'rb')
+            comanda = "/usr/bin/gs -o "+TMP_DIR+"/repair.pdf -sDEVICE=pdfwrite "+SOURCE_FILE_SAGA
+    
+            os.system(comanda)
+
+            f = open(TMP_DIR+"/repair.pdf", 'rb')
+
+            pdf = PyPDF2.PdfFileReader(f)
+            main(pdf)
         except FileNotFoundError as e:
-            print(f"No existeix el fitxer {argv[1]}.")
+            print(f"No existeix el fitxer {argv[1]}")
     else:
-        print("Falta el PDF.")
+        print("Falta el pdf")

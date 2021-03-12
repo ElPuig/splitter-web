@@ -1,47 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Splitter web!</title>
-    <style>
-        <?php include 'css/style.css'; ?>
-    </style>
-	</head>
-
-<body>
-<div class="split left">
-  <img class="logo" src="img/logo.png" alt="logo">
-  <div class="centered">
-    <h3>Comptar el total d'UF avaluades i aprovades</h3>
-    <form method="post" enctype="multipart/form-data">
-        <font size="-1">Afegiu el PDF descarregat de SAGA<br> amb les actes:</font><br>
-        <input class="left" type="file" name="actaToUpload" id="fileToUpload"><br><br>
-        <input type="submit" value="Comptar" name="submitActes">
-    </form>
-   </div>
-   <div class="result">
 <?php 
 
-    define("PYTHON_ACTES_SCRIPT", "UFAprovadesVsAvaluades.py");
-    define("PYTHON_ACTES_SCRIPT_DIR", "../script/");
-    define("TARGET_ACTES_DIR", "../uploads/");
+   define("PYTHON_ACTES_SCRIPT", "UFAprovadesVsAvaluades.py");
+   define("PYTHON_BUTLLETINS_SCRIPT", "ButlletinsSplitter.py");
+   define("RESULT_BUTLLETINS_ZIP_FILE", "studenten.zip");
+
+   define("TMP_DIR", "tmp/");
+   define("UPLOADS_DIR", "../uploads/");
+   define("SCRIPTS_DIR", "../script/");
 
     $fileType = "pdf";
-    $target_file = TARGET_ACTES_DIR.time().".".$fileType;
+    $target_file = UPLOADS_DIR.TMP_DIR.time().".".$fileType;
     $uploadOk = true;
 
     if (isset($_FILES["actaToUpload"])) {
         $uploaded_file = $_FILES["actaToUpload"];
     }
+
     if (isset($_FILES["actaToUpload"]["size"])) {
         $uploaded_size = $_FILES["actaToUpload"]["size"];
     }
 
     // Check PDF file type
     if(isset($_POST["submit"])) {
-        $submit = $_POST["submitActes"];
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
-        
         $uploaded_file_tmp_name = $_FILES["actaToUpload"]["tmp_name"];
 
         echo '<font size="-1">Espereu mentre es fa el recompte,<br> el procés pot trigar alguns segons</font><br>';
@@ -87,39 +68,21 @@
 
         if (move_uploaded_file($uploaded_file["tmp_name"], $target_file)) {
 
-            $command = "python3 '".PYTHON_ACTES_SCRIPT_DIR.PYTHON_ACTES_SCRIPT."' '".$target_file."'";
+		$command = "python3 '".SCRIPTS_DIR.PYTHON_ACTES_SCRIPT."' '".$target_file."'";
             $output = shell_exec($command);
+
+		print_r($output);
 
             echo $output;
 
             // Clear uploaded file
-            system("rm -rf ../uploads/*.pdf", $retval);
+            system("rm -rf ".UPLOADS_DIR.TMP_DIR."*.pdf", $retval);
         }
     }
-?>
-  </div>
-</div>
-<hr>
-<div class="split right">
-	<h1 class="cicles">Cicles Formatius</h1>
-  <div class="centered">
-    <h3>Dividir els butlletins en arxius individuals</h3>
-    <form action="" method="post" enctype="multipart/form-data">
-        <font size="-1">Afegiu el PDF descarregat de SAGA<br> amb els butlletins:</font><br>
-        <input class="right" type="file" name="butlletinsToUpload" id="butlletinsToUpload"><br><br>
-        <input type="submit" value="Descarregar ZIP" name="submitButlletins">
-    </form>
-<?php
-
-define("PYTHON_BUTLLETINS_SCRIPT", "ButlletinsSplitter.py");
-define("PYTHON_BUTLLETINS_SCRIPT_DIR", "../script/");
-define("RESULT_BUTLLETINS_ZIP_FILE", "butlletins.zip");
-define("RESULT_BUTLLETINS_ZIP_FILE_DIR", "../script/tmp/");
-define("TARGET_BUTLLETINS_DIR", "../uploads/");
 
 $uploaded_file = $_FILES["butlletinsToUpload"]["tmp_name"];
 $fileType = "pdf";
-$target_file = TARGET_BUTLLETINS_DIR.time().".".$fileType;
+$target_file = UPLOADS_DIR.TMP_DIR.time().".".$fileType;
 $uploadOk = true;
 
 // Check PDF file type
@@ -168,18 +131,21 @@ if (!$uploadOk) {
     if (move_uploaded_file($_FILES["butlletinsToUpload"]["tmp_name"], $target_file)) {
 
         // Call the ButlletinsSplitter        
-        $ret_val = exec("python3 ".PYTHON_BUTLLETINS_SCRIPT_DIR.PYTHON_BUTLLETINS_SCRIPT." ".$target_file, $ret_val);
+        $ret_val = exec("python3 ".SCRIPTS_DIR.PYTHON_BUTLLETINS_SCRIPT." ".$target_file, $ret_val);
         echo $ret_val;
       
-        // Download zip file
-        $file = RESULT_BUTLLETINS_ZIP_FILE_DIR.RESULT_BUTLLETINS_ZIP_FILE;
+	// Download zip file
+	
+	$file = UPLOADS_DIR.TMP_DIR.RESULT_BUTLLETINS_ZIP_FILE;
+
+	//print_r($file);
 
         if (headers_sent()) {
             echo 'HTTP header already sent';
         } else {
             if (!is_file($file)) {
                 header($_SERVER['SERVER_PROTOCOL']." 404 Not Found");
-                echo "<br>No s'ha trobat el fitxer. ";
+		echo "<br>No s'ha trobat el fitxer. ";
             } else if (!is_readable($file)) {
                 header($_SERVER['SERVER_PROTOCOL']." 403 Forbidden");
                 echo "<br>El fitxer no es pot llegir. ";
@@ -202,22 +168,16 @@ if (!$uploadOk) {
                 unlink($file);
 
                 // Clear temp zip file
-                system("rm -rf ../script/tmp/".RESULT_ZIP_FILE, $retval);
+                system("rm -rf ".SCRIPTS_DIR.TMP_DIR.RESULT_BUTLLETINS_ZIP_FILE, $retval);
 
                 // Clear uploaded file
-                system("rm -rf ../uploads/*.pdf", $retval);
+                system("rm -rf ".UPLOADS_DIR."*.pdf", $retval);
 
                 exit();
             }
         }
 
     } else if(isset($_POST["submitButlletins"])) {
-        echo "<br>S'ha produït un error en pujar el seu fitxer. ";
+        echo "<br>S'ha produït un error en pujar el seu fitxer.";
     }
 }
-?>
-  </div>
-</div>
-</body>
-</html>
-
