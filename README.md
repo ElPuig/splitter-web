@@ -9,12 +9,9 @@ Make sure `uploads/` and `script/tmp/` directories are web writable.
 ## Requirements
 ```
 sudo apt install apache2
-sudo apt install php7.4-cli
 sudo apt install php libapache2-mod-php
-sudo apt install default-jdk
-sudo apt-get install python3	
-sudo apt install python3-pip
-pip3 install PyPDF2
+sudo apt install python3
+sudo apt install python3-pypdf2	
 ```
 
 ## Apache configuration: VirtualHost
@@ -34,8 +31,5 @@ Start the server with:
 
 `sudo systemctl start apache2`
 
-Run the tika server script with:
-
-`bash /var/www/html/script/tika_server_start.sh`
 
 Visit localhost:80 from your browser.
