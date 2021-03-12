@@ -71,9 +71,11 @@
 		$command = "python3 '".SCRIPTS_DIR.PYTHON_ACTES_SCRIPT."' '".$target_file."'";
             $output = shell_exec($command);
 
+		print_r("<pre>");
 		print_r($output);
+		print_r('<a href="/" onclick="window.history.back()">enrere</a>');
+		print_r("</pre>");
 
-            echo $output;
 
             // Clear uploaded file
             system("rm -rf ".UPLOADS_DIR.TMP_DIR."*.pdf", $retval);

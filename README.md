@@ -12,6 +12,7 @@ sudo apt install apache2
 sudo apt install php libapache2-mod-php
 sudo apt install python3
 sudo apt install python3-pypdf2	
+sudo apt install ghostscript
 ```
 
 ## Apache configuration: VirtualHost

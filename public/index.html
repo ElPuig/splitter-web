@@ -11,14 +11,13 @@
   <img class="logo" src="img/logo.png" alt="logo">
   <div class="centered">
     <h3>Comptar el total d'UF avaluades i aprovades</h3>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <form id="actesForm" action="upload.php" method="post" enctype="multipart/form-data">
         <p>Afegiu el PDF descarregat de SAGA amb les actes:</p>
         <input class="left" type="file" name="actaToUpload" id="fileToUpload">
-        <input type="submit" value="Comptar" name="submitActes">
+        <input type="submit" value="Comptar" id="actesBtn" name="submitActes">
     </form>
    </div>
-   <div class="result">
-  </div>
+   <div id="output">  </div>
 </div>
 <hr>
 <div class="split right">
@@ -33,5 +32,6 @@
   </div>
 </div>
 </body>
+  <script src="script.js"></script>
 </html>
 

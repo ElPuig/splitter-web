@@ -41,13 +41,14 @@ def main(_filePdf):
         avaluades += l
         current_page += 1
 
-    print(f"Avaluades: {avaluades}, aprovades: {ap} : {((ap/avaluades)*100):.2f}%")
+    print(f"UFs Avaluades: {avaluades}\nUFs Aprovades: {ap}\nRatio d'UF aprovades: {((ap/avaluades)*100):.2f}%")
 
 if __name__ == "__main__":
     if len(sys.argv)==2:
         try:
+            #reparació del PDF mitjançant ghostscript
             f = open(SOURCE_FILE_SAGA, 'rb')
-            comanda = "/usr/bin/gs -o "+TMP_DIR+"/repair.pdf -sDEVICE=pdfwrite "+SOURCE_FILE_SAGA
+            comanda = "/usr/bin/gs -o "+TMP_DIR+"/repair.pdf -sDEVICE=pdfwrite "+SOURCE_FILE_SAGA+" >/dev/null"
     
             os.system(comanda)
 
